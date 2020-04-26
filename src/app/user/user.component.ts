@@ -11,27 +11,21 @@ export class UserComponent implements OnInit {
   firstName = 'Rick';
   lastName = 'Sanchez';
   age = 20;
+  address = {
+    street: '50 Main St',
+    city: 'Boston',
+    state: 'MA'
+  }
 
-// Inject Dependencies within paranthesis
+// Inject Dependencies within paranthesis (Bring in Data Service)
   constructor() { 
-    console.log("Hello user - from Constructor")
-    
-    // Have to call defined methods here !!
-      this.sayHello();
-      console.log('Before Birthday: '+this.age);
-      
-      this.hasBirthday();
-      console.log('After Birthday: '+this.age);
+
   }
 // Life cycle Method - Ajax calls + Service Calls 
   ngOnInit(): void {
 
   }
-// some methods:
-  sayHello(){
-    console.log(`Hello this is ${this.firstName} ${this.lastName}`)
-  }
-  hasBirthday(){
-    this.age +=1;
+  showAge(){
+    return this.age;
   }
 }
