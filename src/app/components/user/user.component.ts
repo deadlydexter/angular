@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../models/User'
+import {User} from '../../models/User'
 
 @Component({
   selector: 'app-user',
@@ -13,21 +13,19 @@ export class UserComponent implements OnInit {
 
 // Inject Dependencies within paranthesis (Bring in Data Service)
   constructor() { 
-  this.user={
-    firstName: 'Rick',
-    lastName: 'Sanchez',
-    age: 20,
-    address:{
-      street: '50 Main st.',
-      city: 'Boston',
-      state: 'MA'
-    }
   }
-
-  }
-// Life cycle Method - Ajax calls + Service Calls 
+// Life cycle Method - Ajax calls + Service Calls + Initializer
   ngOnInit(): void {
-
+    this.user={
+      firstName: 'Rick',
+      lastName: 'Sanchez',
+      age: 20,
+      address:{
+        street: '50 Main st.',
+        city: 'Boston',
+        state: 'MA'
+      }
+    }
   }
 
 }
