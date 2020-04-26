@@ -8,25 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class UserComponent implements OnInit {
 
   // Properties
-  firstName = 'John';
-  lastName = 'Smith';
+  firstName = 'Rick';
+  lastName = 'Sanchez';
   age = 20;
 
-// Inject Dependencies
+// Inject Dependencies within paranthesis
   constructor() { 
-    console.log("Hello user")
-    this.sayHello();
-    console.log('before '+this.age);
-    this.hasBirthday();
-    console.log('After '+this.age);
+    console.log("Hello user - from Constructor")
+    
+    // Have to call defined methods here !!
+      this.sayHello();
+      console.log('Before Birthday: '+this.age);
+      
+      this.hasBirthday();
+      console.log('After Birthday: '+this.age);
   }
-// Life cycle Method - Ajax calls 
+// Life cycle Method - Ajax calls + Service Calls 
   ngOnInit(): void {
 
   }
-
+// some methods:
   sayHello(){
-    console.log(`Hello ${this.firstName}`)
+    console.log(`Hello this is ${this.firstName} ${this.lastName}`)
   }
   hasBirthday(){
     this.age +=1;
