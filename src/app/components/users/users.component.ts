@@ -8,7 +8,7 @@ import {User} from '../../models/User';
 export class UsersComponent implements OnInit {
 
   public users:User[];
-  showExtended: boolean = false;
+  showExtended: boolean = true;
   loaded: boolean= false;
 
   constructor() { }
@@ -49,7 +49,7 @@ export class UsersComponent implements OnInit {
       ];
 
       this.loaded = true;
-      
+
     },3000)
     
     // Add Addtional User
