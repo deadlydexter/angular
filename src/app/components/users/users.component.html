@@ -4,7 +4,7 @@
     <li class="card card-body mb-2" *ngFor="let user of users" [class.bg-light]="false"> 
         <div class="row">
             <div class="col-sm-4">
-                <img class="img-fluid" [src]="user.image" alt="">
+                <img class="img-fluid rounded " [src]="user.image" alt="">
             </div>
             <div class="col-sm-8">
                 <h3>{{user.firstName }} {{user.lastName}}</h3>
@@ -23,3 +23,68 @@
 <h4 *ngIf="users?.length == 0">No Users Found</h4>
 
 <h4 *ngIf="!loaded">Loading Users....</h4>
+
+<div class="container table-responsive mb-5">
+    <h2 class="ml-2 mt-2">Condensed Table</h2>
+    
+    <table class="table table-condensed ml-3">
+      <thead class="thead-dark">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rick</td>
+          <td>Sanchez</td>
+          <td>rick@example.com</td>
+        </tr>
+        <tr>
+          <td>Morty</td>
+          <td>Smith</td>
+          <td>morty@example.com</td>
+        </tr>
+        <tr>
+          <td>Jerry</td>
+          <td>Smith</td>
+          <td>jerry@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="container"> 
+  <h3 class="ml-2 mt-2">Table with Column span</h3>
+  <table class="table table-bordered">
+      
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="margin-bottom: 200px;"></div></div>
